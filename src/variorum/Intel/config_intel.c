@@ -67,7 +67,7 @@ int set_intel_func_ptrs(void)
     g_platform.variorum_cap_gpu_power_ratio = gpu_power_ratio_unimplemented;
 
     // Sandy Bridge 06_2A
-    if (*g_platform.intel_arch == FM_06_2A)
+    if (*g_platform.intel_arch == FM_06_2A || *g_platform.intel_arch == 58)
     {
         g_platform.variorum_print_power_limit = fm_06_2a_get_power_limits;
         g_platform.variorum_cap_each_socket_power_limit =
